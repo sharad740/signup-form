@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singup</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: #e2f3f3;
+    line-height: 1.75em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    --bg-color: #171717;
+    --btn-color: #0c8ec4;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #222;
+    padding: 1em 2.5em;
+    margin: 1em;
+}
+
+.small-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.web-logo {
+    display: flex;
+    justify-content: center;
+    font-size: 1.6em;
+    margin: .4em 0em;
+}
+
+.check-agreement label {
+    display: flex;
+    margin: 2em 0px;
+}
+
+.heading {
+    font-size: 2em;
+    color: var(--btn-color);
+    margin: .4em 0px;
+}
+
+.signup-info,
+h3 {
+    color: #bbb;
+    font-weight: px;
+}
+
+h3 {
+    margin-top: .8em;
+    font-size: 1em;
+}
+
+a,
+.link-text {
+    color: var(--btn-color);
+}
+
+input {
+    outline: #333;
+    border: 1px solid #333;
+    height: 2.8em;
+    width: 100%;
+    margin-top: 0.4em;
+    background-color: var(--bg-color);
+    padding-left: 2em;
+    letter-spacing: 0.09em;
+    font-size: 1em;
+    color: #bbb;
+}
+
+input[type="checkbox"] {
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: 1em;
+}
+
+button {
+    background-color: var(--btn-color);
+    border-color: var(--btn-color);
+    padding: .4em 2em;
+    margin: .6em 0px;
+    font-size: 1.1em;
+}
+
+span.optional-or {
+    text-align: center;
+}
+
+.signup-3rd-party {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (min-width:780px) {
+    .container {
+        width: 60%;
+    }
+}
+
+form .confirm-password {
+    color: var(--btn-color)
+}
+
+
+/* Author : Sharad Bhandari
+email : bsharad740@gmail.com
+
+Contact for more discounted items
+*/
+    
+    </style>
+    <!-- Author : Sharad Bhandari
+    email : bsharad740@gmail.com
+    Contact for more discounted items -->
+
+</head>
+
+<body>
+    <header>
+        <main class="container">
+            <div class="small-info">
+                Already have an account?
+                <a href="#login">Sign in</a>
+            </div>
+            <div class="web-logo">
+                <!-- <img src="" alt="logo-image" srcset=""> -->
+                <div class="logo-name">Garudh <span class="link-text"> IT</span></div>
+            </div>
+            <div class="heading">Sign Up</div>
+            <div class="signup-info">Join the leading showcase platform for games, film, media & entertainment artists</div>
+
+            <form action="post" method="post" class="form-section">
+                <!-- Name section -->
+                <div class="name-section">
+                    <h3 class="label-name">Full Name</h3>
+                    <input required="true" type="text" name="fullname">
+                </div>
+
+                <!-- email section -->
+                <div class="email-section">
+                    <h3 class="label-name">Email</h3>
+                    <input required="true" type="email">
+
+                </div>
+
+                <!-- password -->
+                <div class="password">
+                    <h3 class="label-name">Password</h3>
+                    <input required="true" type="password" name="password"></div>
+                </div>
+
+                <!-- confirm password -->
+                <div class="confirm-password">
+                    <h3 class="label-name">Confirm Password</h3>
+                    <input required="true" type="password" name="password1">
+                </div>
+
+                <!-- checkbox -->
+                <div class="check-agreement">
+                    <label>
+                        <input required="true" class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="accept_agreement" type="checkbox" value="true">
+                        <div class="custom"></div>
+                        <span>By creating an account, you agree to our 
+                        <a href="/tos" >Terms of Service</a> and 
+                        <a href="/privacy" >Privacy Policy</a>.</span>
+                    </label>
+                </div>
+                <div class="create-button">
+                    <button type="submit" class="submit-button">Create account</button>
+                </div>
+            </form>
+            <!-- end of form submission -->
+
+            <div class="saperator"></div>
+            <div class="social-login-section">
+                <div class="signup">
+                    <span class="optional-or">or sign up with</span>
+                    <div class="separator-xs">
+
+                    </div>
+                    <div class="signup-3rd-party">
+
+                        <!-- Google login -->
+                        <google-login>
+                            <button class="btn btn-gg" type="button">
+                                <i class="fab fa-google fa-pad-right-x2"></i>
+                                Sign up with Google
+                            </button>
+                        </google-login>
+
+                        <!-- Facebook Login-->
+                        <facebook-login>
+                            <button class="btn btn-default btn-fc">
+                                <i class="fab fa-facebook text-white fa-pad-right-x2"></i>
+                                Sign up with Facebook
+                            </button>
+                        </facebook-login>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </header>
+</body>
+
+</html>
